@@ -10,7 +10,6 @@ public class loadCSV {
         ArrayList<oceanEntries> oceanArray = new ArrayList<oceanEntries>();
         String[] tempString= new String[8];
         String[] tempDateString = new String[3];
-        int tempTime;
 
         try {
 
