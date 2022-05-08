@@ -11,6 +11,8 @@ public class loadCSV {
         String[] tempString= new String[8];
         String[] tempDateString = new String[3];
 
+        int metavliti;
+
         try {
 
             BufferedReader readCSV = new BufferedReader(new FileReader("ocean.csv"));
