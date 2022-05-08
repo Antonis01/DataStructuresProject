@@ -1,30 +1,26 @@
 public class Date{
 
-    private int month, day, year;
+    private String month, day, year;
 
-    public Date(int month, int day, int year) {
+    public Date(String year, String month, String day) {
         this.month = month;
         this.day = day;
         this.year = year;
     }
 
     public String displayDate(){
-        return getMonth() + "/" + getDay() + "/" + getYear();
+        return year + "/" + month + "/" + day;
     }
 
-    public int getDate(){
-        return getMonth() + getDay() +  getYear();
-    }
-
-    public int getMonth() {
+    public String getMonth() {
         return month;
     }
 
-    public int getDay() {
+    public String getDay() {
         return day;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 }

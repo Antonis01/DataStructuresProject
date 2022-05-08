@@ -22,7 +22,7 @@ public class loadCSV {
                 tempString = readLine.split(splitBy);
                 tempDateString = tempString[0].split(splitBy2);
 
-                var date = new Date(Integer.parseInt(tempDateString[0]),Integer.parseInt(tempDateString[1]), Integer.parseInt(tempDateString[2]));
+                var date = new Date(tempDateString[2],tempDateString[0], tempDateString[1]);      ///dd
                 var oceanEn = new oceanEntries(date, Float.parseFloat(tempString[1]), Float.parseFloat(tempString[2]), Float.parseFloat(tempString[3]), Float.parseFloat(tempString[4]), Float.parseFloat(tempString[5]), Float.parseFloat(tempString[6]), Float.parseFloat(tempString[7]));
 
                 oceanArray.add(oceanEn);
@@ -32,15 +32,6 @@ public class loadCSV {
         }catch (IOException e){
             e.printStackTrace();
         }
-
         return oceanArray;
-
     }
-
 }
-    /* for(var i: oceanArray)
-            {
-               System.out.println(i.getDate().displayDate() + " "+ i.getNO2uM());
-
-            }
-    */
