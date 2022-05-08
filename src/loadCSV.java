@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 public class loadCSV {
 
-    public static void load_CSV_file() {
-        String readLine = "", splitBy = ",", splitBy2 = "/";
-        ArrayList<oceanEntries> oceanArray = new ArrayList<oceanEntries>();
+    public static ArrayList<oceanEntries> load_CSV_file() {
+        String readLine = " ", splitBy = ",", splitBy2 = "/";
+        ArrayList<oceanEntries> oceanArray = new ArrayList<>();
         String[] tempString= new String[8];
         String[] tempDateString = new String[3];
 
@@ -28,14 +28,19 @@ public class loadCSV {
                 oceanArray.add(oceanEn);
             }
 
-           for(var i: oceanArray)
-            {
-               System.out.println(i.getDate().displayDate() + " "+ i.getNO2uM());
-
-            }
 
         }catch (IOException e){
             e.printStackTrace();
         }
+
+        return oceanArray;
+
+    }
+
 }
-}
+    /* for(var i: oceanArray)
+            {
+               System.out.println(i.getDate().displayDate() + " "+ i.getNO2uM());
+
+            }
+    */

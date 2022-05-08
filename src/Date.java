@@ -9,8 +9,13 @@ public class Date{
     }
 
     public String displayDate(){
-        return month + "/" + day + "/" + year;
+        return getMonth() + "/" + getDay() + "/" + getYear();
     }
+
+    public int getDate(){
+        return getMonth() + getDay() +  getYear();
+    }
+
     public int getMonth() {
         return month;
     }

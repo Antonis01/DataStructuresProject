@@ -1,7 +1,12 @@
+import java.util.ArrayList;
+
 public class Main {
 
+    public static ArrayList<oceanEntries> dataOcean = new ArrayList<>(loadCSV.load_CSV_file());
+
     public static void main(String[] args) {
-	    loadCSV.load_CSV_file();
-        // write your code here
+
+        BinarySearch bs= new BinarySearch();
+        System.out.println(bs.binarySearch("11/7/2001"));
     }
 }
