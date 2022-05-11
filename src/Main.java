@@ -8,6 +8,12 @@ public class Main {
 
     public static void main(String[] args) {
 
+        HeapSort hs=new HeapSort();
+        hs.HeapSort(dataOcean);
+
+        hs.printHeapSort(dataOcean);
+
+
         Scanner scn = new Scanner(System.in);
         String scnDate;
         System.out.println("Give a date in the (yyyy/mm/dd) form.");
