@@ -4,7 +4,6 @@ public class BinarySearch {
 
     public static String binarySearch(String date){
 
-        //getting the arrayList data from the Main class
         int left = 0, right = Main.dataOcean.size()-1;
 
         while(right>=left){
