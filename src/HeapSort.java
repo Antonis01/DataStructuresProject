@@ -21,7 +21,6 @@ public class HeapSort {
 
     static void heapSort(ArrayList<oceanEntries> dataOcean, int left, int right){
         int N= right - left, k=(N%2==0 ? N/2-1 : N/2);
-        oceanEntries temp;
 
         for(; k>=0; k--)
             makeHeap(dataOcean,k,right);
