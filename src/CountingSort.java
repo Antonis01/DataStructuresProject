@@ -18,7 +18,7 @@ public class CountingSort {
         oceanEntries temp_entry; //Proetimasia C
         float temp_f_phosphate;
         int temp_i_phosphate;
-        for (int j = 0; j <= n - 1; j++) {
+        for (int j = 0; j < n ; j++) {
             temp_entry = (oceanEntries) A.get(j);
             temp_f_phosphate = temp_entry.getPO4uM() * 100; //*100 Gia na ginoun integers
             temp_i_phosphate = (int) temp_f_phosphate;

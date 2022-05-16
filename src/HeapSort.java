@@ -1,6 +1,4 @@
-import java.net.Inet4Address;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class HeapSort {
@@ -38,4 +36,3 @@ public class HeapSort {
         System.out.println();
     }
 }
-
