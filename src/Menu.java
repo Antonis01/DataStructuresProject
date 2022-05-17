@@ -96,6 +96,10 @@ public class Menu {
 
                     case 3:
                         System.out.println("You have selected Binary Interpolation Search!");
+                        System.out.println("Give a date in the (yyyy/mm/dd) format.");
+                        scan2 = scn2.nextLine();
+                        BinaryInterpolationSearch bis = new BinaryInterpolationSearch();
+                        System.out.println(bis.binaryInterpolationSearch(scan2));
                         break;
 
 
