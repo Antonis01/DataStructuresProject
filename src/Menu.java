@@ -35,11 +35,11 @@ public class Menu {
                         System.out.println("You have selected Counting Sort!");
                         //Counting Sort
                         CountingSort cs = new CountingSort(); //Create Counting Sort object
-                        cs.countingSort(Main.dataOcean, Main.sorted_array, 1405, 332); //Call the Counting Sort Function and put in the parameters
+                        cs.countingSort(Main.dataOcean,1405, 332); //Call the Counting Sort Function and put in the parameters
                         // 1405 = how many entries we have , 332 = the maximum Phosphate registered in our data
                         //The Function sorts the dataOcean array inside the sorted_array array
-                        for (int i = 1; i <= 1405; i++) {
-                            System.out.println(i + ") " + Main.sorted_array.get(i).getDate().displayDate() + " " + Main.sorted_array.get(i).getPO4uM());
+                        for (int i = 0; i < Main.dataOcean.size(); i++) {
+                            System.out.println(i+1 + ") " + Main.dataOcean.get(i).getDate().displayDate() + " " + Main.dataOcean.get(i).getPO4uM());
                         }
                         break;
 

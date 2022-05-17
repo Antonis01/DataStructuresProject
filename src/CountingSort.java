@@ -40,5 +40,11 @@ public class CountingSort {
             C.set(temp_i_phosphate, C.get(temp_i_phosphate) - 1); //C[A[j]]<-C[A[j]]-1
 
         }
+
+
+        //Copying B into A
+        for(int i = 1; i<=1405; i++){
+            A.set(i-1, B.get(i));
+        }
     }
 }
