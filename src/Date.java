@@ -12,6 +12,8 @@ public class Date{
         return year + "/" + month + "/" + day;
     }
 
+    public Integer displayIntDate() {return Integer.parseInt(year + month + day); }
+
     public String getMonth() {
         return month;
     }

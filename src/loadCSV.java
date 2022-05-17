@@ -16,7 +16,6 @@ public class loadCSV {
             BufferedReader readCSV = new BufferedReader(new FileReader("ocean.csv"));
 
             readLine = readCSV.readLine();
-            System.out.println(readLine + "\n");
 
             while((readLine = readCSV.readLine())!=null){
                 tempString = readLine.split(splitBy);
