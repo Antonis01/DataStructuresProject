@@ -2,8 +2,9 @@ import java.util.ArrayList;
 
 public class CountingSort {
 
+    public static ArrayList B = new ArrayList();
     //METHODS
-    public static void countingSort(ArrayList A, ArrayList B, int n, int k) {
+    public static void countingSort(ArrayList A, int n, int k) {
 
         ArrayList<Integer> C = new ArrayList<>();
 
