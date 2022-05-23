@@ -22,6 +22,8 @@ public class Menu {
                         break;
                     case 2:
                         System.out.println("You have selected Quick Sort!");
+                        QuickSort is=new QuickSort():
+                        is.QuickSort(0,Main.dataOcean.size()-1, Main.dataOcean.size()/2);
                         break;
 
                     case 3:
