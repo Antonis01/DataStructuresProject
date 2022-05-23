@@ -30,7 +30,7 @@ public class QuickSort {
     static void printQuickSort() {
         int Size_Array = Main.dataOcean.size();
         for (int i = 0; i < Size_Array; ++i)
-            System.out.println(i + ") " + Main.dataOcean.get(i).getDate().displayDate() + " " + Main.dataOcean.get(i).getPO4uM());
+            System.out.println(i + ") " + Main.dataOcean.get(i).getDate().displayDate() + " " + Main.dataOcean.get(i).getT_degC());
         System.out.println();
     }
 }
