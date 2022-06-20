@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class loadCSV {
@@ -12,6 +10,7 @@ public class loadCSV {
         String[] tempDateString = new String[3];
 
         try {
+
 
             BufferedReader readCSV = new BufferedReader(new FileReader("ocean.csv"));
 
@@ -31,6 +30,7 @@ public class loadCSV {
         }catch (IOException e){
             e.printStackTrace();
         }
+
         return oceanArray;
     }
 }
