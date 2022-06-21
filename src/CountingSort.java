@@ -48,4 +48,11 @@ public class CountingSort {
             A.set(i-1, B.get(i));
         }
     }
+
+    static void printCountingSort() {
+        int Size_Array = Main.dataOcean.size();
+        for (int i = 0; i < Size_Array; ++i)
+            System.out.println(i + ") " + Main.dataOcean.get(i).getDate().displayDate() + " " + Main.dataOcean.get(i).getPO4uM());
+        System.out.println();
+    }
 }

@@ -60,9 +60,7 @@ public class Menu {
                         //The Function sorts the dataOcean array inside the sorted_array array
                         end = System.nanoTime();
                         execution = (end - start);
-                        for (int i = 0; i < Main.dataOcean.size(); i++) {
-                            System.out.println(i+1 + ") " + Main.dataOcean.get(i).getDate().displayDate() + " " + Main.dataOcean.get(i).getPO4uM());
-                        }
+                        cs.printCountingSort();
                         System.out.println("Execution time of Counting Sort is");
                         System.out.println(execution + " nanoseconds");
                         break;

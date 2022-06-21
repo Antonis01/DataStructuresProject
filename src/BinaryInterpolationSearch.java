@@ -33,56 +33,50 @@ public class BinaryInterpolationSearch {
         }
 
         //Start of Binary Interpolation Search
-        int i;
-        int left = 0;
-        int right = Main.dataOcean.size()-1;
-        float size = right - left + 1;
-        float next = ( size * (((float)intDate-oceanDates[left])/(oceanDates[right]-oceanDates[left])) ) +1;
 
-        while(intDate!=oceanDates[(int)next]){
+        double key = (double) intDate;
+        double left = 0, right= Main.dataOcean.size()-1, size=right-left+1, i;
+        double next = size*((key-oceanDates[(int)left])/(oceanDates[(int)right]-oceanDates[(int)left]));
+        if(next<1){next = 1;}
+        while (key != oceanDates[(int)next])
+        {
             i=0;
-            size=right-left+1;
+            size = right-left+1;
 
-            //APEFTHIAS--------
-            if(size<=50){
-                if(intDate >= oceanDates[(int)next]){
-                    while (true){
-                        if (intDate == oceanDates[(int) next]){
-                            return "Temperature in Celsius: " + Main.dataOcean.get((int) next).getT_degC() + " Phosphate: "+ Main.dataOcean.get((int)next).getPO4uM();
-                        }
-                            next++;
-                        }
-                    }
-                else if(intDate < oceanDates[(int)next]){
-                    while (true) {
-                        if (intDate == oceanDates[(int) next]) {
-                            return "Temperature in Celsius: " + Main.dataOcean.get((int) next).getT_degC() + " Phosphate: "+ Main.dataOcean.get((int)next).getPO4uM();
-                        }
-                        next--;
-                    }
+            //Apefthias
+            if(size <= 10)
+            {
+                for(int j = 0; j<4; j++)
+                {
+                    if(key == oceanDates[(int)next]){return Float.toString(Main.dataOcean.get((int)next).getPO4uM());}
+                    next = next+1;
                 }
-            }
-            //APEFTHIAS--------
 
-            if(intDate >= oceanDates[(int)next]){
-                while (intDate > oceanDates[(int)(next+(i*Math.sqrt((double)size)))-1]){
-                    i++;
-                }
-                right =(int)(next + i*Math.sqrt((double)size));
-                left =(int)(next + (i-1)*Math.sqrt((double)size));
-            }
-            else if(intDate < oceanDates[(int)next]){
-                while (intDate < oceanDates[(int)(next-(i*Math.sqrt((double)size)))+1]){
-                    i++;
-                }
+                return "Date Not Found";
             }
 
-            next = left + ( (float)(right-left+1)*((float)intDate-oceanDates[left])/(oceanDates[right]-oceanDates[left]) ) -1;
+            if(key >= oceanDates[(int)next])
+            {
+                while (key > oceanDates[(int)(next+(i*(Math.sqrt(size)))-1)])
+                {
+                    i=i+1;
+                }
+                right = next + (i*Math.sqrt(size));
+                left = next + ((i-1)*Math.sqrt(size));
+            }
+            else if(key < oceanDates[(int)next])
+            {
+                while (key < oceanDates[(int)(next-(i*Math.sqrt(size))-1)])
+                {
+                    i=i+1;
+                }
+                right = next - (i-1)*Math.sqrt(size);
+                left = next - i*Math.sqrt(size);
+            }
+            next= left + ( (right-left+1) * ((key-oceanDates[(int)left])/(oceanDates[(int)right]-oceanDates[(int)left])) ) - 1;
+
         }
-
-        if(intDate == oceanDates[(int)next]){
-            return "Temperature in Celsius: " + Main.dataOcean.get((int) next).getT_degC() + " Phosphate: "+ Main.dataOcean.get((int)next).getPO4uM();
-        }
-        else return "Not Found";
+        if(key == oceanDates[(int)next]){return Float.toString(Main.dataOcean.get((int)next).getPO4uM());}
+        else return "Date Not Found";
     }
 }
