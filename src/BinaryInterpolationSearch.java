@@ -48,8 +48,10 @@ public class BinaryInterpolationSearch {
             {
                 for(int j = 0; j<4; j++)
                 {
-                    if(key == oceanDates[(int)next]){return Float.toString(Main.dataOcean.get((int)next).getPO4uM());}
-                    next = next+1;
+                    if(key == oceanDates[(int)next])
+                        return "Temperature in Celsius: " + Float.toString(Main.dataOcean.get((int)next).getT_degC()) + ", Phosphate: " + Float.toString(Main.dataOcean.get((int)next).getPO4uM());
+
+                        next = next+1;
                 }
 
                 return "Date Not Found";
@@ -76,7 +78,11 @@ public class BinaryInterpolationSearch {
             next= left + ( (right-left+1) * ((key-oceanDates[(int)left])/(oceanDates[(int)right]-oceanDates[(int)left])) ) - 1;
 
         }
-        if(key == oceanDates[(int)next]){return Float.toString(Main.dataOcean.get((int)next).getPO4uM());}
-        else return "Date Not Found";
+        if(key == oceanDates[(int)next])
+            return "Temperature in Celsius: " + Float.toString(Main.dataOcean.get((int)next).getT_degC()) + ", Phosphate: " + Float.toString(Main.dataOcean.get((int)next).getPO4uM());
+        else
+            return "Date Not Found";
+
+
     }
 }

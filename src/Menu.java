@@ -92,12 +92,6 @@ public class Menu {
                         System.out.println(bs.binarySearch(scan2));
                         end = System.nanoTime();
                         execution = (end - start);
-                        String[] arr1 = new String[Main.dataOcean.size()];
-                        for (int j = 0; j < Main.dataOcean.size(); j++) {
-                            for (var i : Main.dataOcean) {
-                                arr1[j] = i.getDate().displayDate();
-                            }
-                        }
                         System.out.println("Execution time of Binary Search Method is");
                         System.out.println(execution + " nanoseconds");
                         break;
@@ -111,12 +105,6 @@ public class Menu {
                         System.out.println(is.interpolationSearch(scan2));
                         end = System.nanoTime();
                         execution = (end - start);
-                        String[] arr2 = new String[Main.dataOcean.size()];
-                        for (int j = 0; j < Main.dataOcean.size(); j++) {
-                            for (var i : Main.dataOcean) {
-                                arr2[j] = i.getDate().displayDate();
-                            }
-                        }
                         System.out.println("Execution time of Interpolation Method is");
                         System.out.println(execution + " nanoseconds");
                         break;
