@@ -16,8 +16,7 @@ public class HeapSort {
                 Collections.swap(Main.dataOcean,maxSon,k);
                 k=maxSon;
             }
-        }else {
-            while(2*k+1 <=N){
+        }else {            while(2*k+1 <=N){
                 int maxSon = 2*k+1;
                 if(maxSon < N && Main.dataOcean.get(maxSon).getPO4uM() < Main.dataOcean.get(maxSon+1).getPO4uM())
                     maxSon++;
